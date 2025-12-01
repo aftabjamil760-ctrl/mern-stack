@@ -1,8 +1,10 @@
-FROM node
+FROM node:18-alpine
 
-ENV MONGO_DB_USERNAME=admin \
-    MONGO_DB_PWD=adminpassword 
-RUN mkdir -p backend
-COPY . /backend
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
 
-CMD ["node", "/backend/server.js"]
+COPY . .
+
+EXPOSE 5000
+CMD ["npm", "start"]
