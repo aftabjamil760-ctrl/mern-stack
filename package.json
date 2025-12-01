@@ -1,0 +1,17 @@
+{
+  "name": "3-ecommerence",
+  "version": "1.0.0",
+  "description": "This is a full-stack ecommerce application with a modern search feature and a complete authentication system including email verification, Google OAuth, and JWT-based sessions.",
+  "main": "server.js",
+  "scripts": {
+  "dev": "concurrently \"npm run dev --prefix frontend\" \"npm start --prefix backend\""
+},
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
